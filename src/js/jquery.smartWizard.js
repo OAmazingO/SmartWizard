@@ -616,6 +616,10 @@
                         break;
                 }
             }
+        },
+        skipTo:function (idx) {
+            this.steps.eq(idx).parent('li').prevAll().addClass("done");
+            this._showStep(idx);
         }
     });
 
